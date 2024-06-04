@@ -1,0 +1,28 @@
+
+ros2 run demo_nodes_cpp talker
+ros2 run demo_nodes_py listener
+
+桥：
+ros2 run ros1_bridge dynamic_bridge
+初始化：
+ros2 launch turn_on_wheeltec_robot turn_on_wheeltec_robot.launch.py
+建图1：
+ros2 launch wheeltec_slam_toolbox online_sync.launch.py
+建图2：
+ros2 launch slam_gmapping slam_gmapping.launch.py
+建图3：
+ros2 launch wheeltec_cartographer cartographer.launch.py
+巡线：
+ros2 launch simple_follower_ros2 line.launch.py
+雷达跟随：
+ros2 launch simple_follower_ros2 laser_follow.launch.py
+导航：
+ros2 launch wheeltec_robot_nav wheeltec_navigation.launch.py
+编译：
+colcon build --packages-select turn_on_wheeltec_robot
+键盘控制：
+ros2 run  wheeltec_robot_keyboard wheeltec_keyboard
+
+保存地图：
+save_map
+
