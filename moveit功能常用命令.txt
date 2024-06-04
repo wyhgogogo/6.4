@@ -1,0 +1,17 @@
+1.配置机械臂功能包的可视化工具moveit_setup_assistant
+roslaunch moveit_setup_assistant setup_assistant.launch 
+
+2.机械臂逆解例程
+roslaunch arm_demo ik_demo.launch
+
+3.机械臂正解例程
+roslaunch arm_demo fk_demo.launch
+
+4.机械臂笛卡尔空间路径例程
+roslaunch arm_demo cartesian_demo.launch 
+
+5.机械臂夹取色块例程（调参）
+roslaunch wheeltec_arm_pick test_param.launch
+
+6..机械臂夹取色块例程（应用）
+roslaunch wheeltec_arm_pick arm_pick_color.launch
